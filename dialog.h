@@ -5,6 +5,7 @@
 #define DIALOG_H
 
 #include <QtGui>
+#include <string>
 
 class Dialog : public QDialog
 {
@@ -22,5 +23,6 @@ class Dialog : public QDialog
 
 };
 
+std::string getAssetDir();
 
 #endif /* dialog.h */

@@ -2,13 +2,16 @@
 // Last Modified: 03-12-2015
 
 #include "dialog.h"
+#include <iostream>
+#include <cstdlib>
+#include <unistd.h>
 
 Dialog::Dialog(QWidget *parent)
     : QDialog(parent)
 {
     gridLayout = new QGridLayout();
 
-    inputImg = new QImage("/Users/hijiri/OneDrive/workstation/BattleShip/test.png");
+    inputImg = new QImage(":/image/test.png");
 
     imgDisplayLabel = new QLabel("");
     imgDisplayLabel->setPixmap(QPixmap::fromImage(*inputImg));
@@ -31,3 +34,10 @@ Dialog::~Dialog()
     delete gridLayout;
 }
 
+
+std::string getAssetDir()
+{
+    char cwd[PATH_MAX];
+    getcwd(cwd, PATH_MAX);
+    return std::string(cwd);
+}
