@@ -24,6 +24,7 @@ int main(int argc, char* argv[])
     return app.exec();*/
 
     std::cout << getAssetDir() << std::endl;
+    std::cout << "Check" << std::endl;
     return 0;
 }
 
